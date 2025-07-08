@@ -308,8 +308,13 @@ const handleNameChange = (e) => {
 
 const handlePersonaMatch = async (userAnswers: string[]): Promise<{ isRobot: boolean; robotOutput: string }> => {
   try {
-    const traits = userAnswers.map(answer => answer.toLowerCase());
-
+   let traits = userAnswers.map((answer, index) => {
+      const question = selectedSet[index]?.questionId || `question-${index + 1}`;
+      return `${question}: ${answer}`;
+    }); 
+    if (userName.trim() !== '') {
+      traits.unshift(`User Name: ${userName}`); // Add user name to traits
+    }
     const res = await fetch('/api/robotpersona', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
