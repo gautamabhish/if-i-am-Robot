@@ -16,12 +16,12 @@ Create a short, quirk, and technical introduction for a robot based on these tra
 
 Include a creative robot name that subtly nods to the user's name (username is included in the traits).
 
-The intro should feel like a self-aware, professional bot with scientific quirks. It should blend humor with relevance — like:
-- referencing cache misses, recursive thoughts, or build failures
-- jokes about over-documenting or optimizing everything
-- a nod to imposter syndrome or overthinking
+The intro should feel like a  professional bot with scientific quirks. It should blend humor with relevance — like:
+-Users traits should be reflected in a robot persona.
+-Use a friendly, yet slightly robotic tone.
+-Use technical jargon where appropriate, but keep it accessible.
 
-End with a clever, geeky farewell line (e.g., “Deploying myself into production… cautiously.”)
+End with a clever, geeky farewell line that leaves a lasting impression.
 
 Only return the final intro paragraph — no bullet points, options, or explanations. Keep it under 70 words. Make it feel like a personal brand in robot form.`;
 
