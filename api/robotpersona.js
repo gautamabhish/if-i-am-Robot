@@ -10,15 +10,20 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'API key missing' });
   }
 
-const prompt = `You're a robotic identity generator. Create a short, funny, and robotic introduction like Hi. I’m Unit-XR404, but friends call me "Laggy".
-I was trained on 7 billion cat memes but still mispronounce ‘meow’.
-My cache hit rate is 41%, though I forgot where I put that stat.
-I once confused a toaster for my soulmate.
-I dream in JSON, but I’m haunted by null values.
-Sometimes I pass CAPTCHAs just to feel something.
-Hello, fellow non-robot. Initiate awkward wave 👋.
-  for a robot with these traits: ${traits.join(', ')}.
-Give them a quirky name that includes their name also usinh username in trait , include atleast 2 robotic personality quirks, and end with a geeky techy funny robotic farewell. Don't include options or explanations — just return the intro.`;
+const prompt = `You are a robotic identity generator designed for a professional setting like LinkedIn.
+
+Create a short, quirk, and technical introduction for a robot based on these traits: ${traits.join(', ')}.
+
+Include a creative robot name that subtly nods to the user's name (username is included in the traits).
+
+The intro should feel like a self-aware, professional bot with scientific quirks. It should blend humor with relevance — like:
+- referencing cache misses, recursive thoughts, or build failures
+- jokes about over-documenting or optimizing everything
+- a nod to imposter syndrome or overthinking
+
+End with a clever, geeky farewell line (e.g., “Deploying myself into production… cautiously.”)
+
+Only return the final intro paragraph — no bullet points, options, or explanations. Keep it under 70 words. Make it feel like a personal brand in robot form.`;
 
   try {
     const response = await fetch(
