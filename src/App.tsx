@@ -310,7 +310,7 @@ const handlePersonaMatch = async (userAnswers: string[]): Promise<{ isRobot: boo
   try {
     const traits = userAnswers.map(answer => answer.toLowerCase());
 
-    const res = await fetch('/api/robot-persona', {
+    const res = await fetch('/api/robotpersona', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ traits }),
