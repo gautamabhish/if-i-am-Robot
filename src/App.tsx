@@ -29,7 +29,7 @@ import scroll from './assets/images/scroll.png';
 import robotImg from './assets/images/RecaptchaLogo.svg.png'; // Assuming you have a robot image for the checkbox
 import { Copy } from "lucide-react";
 // Create an object mapping original filenames to their imported module paths
-import handler from "../api/robotpersona.js"
+
 const TypingEffect = ({ text, speed = 20 }) => {
   const [displayed, setDisplayed] = useState('');
 
