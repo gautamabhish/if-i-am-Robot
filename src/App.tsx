@@ -441,7 +441,7 @@ const handlePersonaMatch = async (userAnswers: string[]): Promise<{ isRobot: boo
 
         {/* Robot Persona Output */}
 {!isLoading && robotPersona && (
-  <div className="p-4 text-left space-y-4 relative">
+  <div className="p-4 text-left space-y-4 relative max-w-2xl">
  
 
     {/* Robot Persona Chat-style Box */}
