@@ -18,7 +18,7 @@ I dream in JSON, but I’m haunted by null values.
 Sometimes I pass CAPTCHAs just to feel something.
 Hello, fellow non-robot. Initiate awkward wave 👋.
   for a robot with these traits: ${traits.join(', ')}.
-Give them a quirky name that includes their name also , include atleast 2 robotic personality quirks, and end with a geeky techy funny robotic farewell. Don't include options or explanations — just return the intro.`;
+Give them a quirky name that includes their name also usinh username in trait , include atleast 2 robotic personality quirks, and end with a geeky techy funny robotic farewell. Don't include options or explanations — just return the intro.`;
 
   try {
     const response = await fetch(
